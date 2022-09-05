@@ -1,0 +1,44 @@
+* {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 24px;
+}
+
+html {
+  background-image: url(./images/got_kings_landing_final1.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  font-size: 36px;
+  background-color: aliceblue;
+  border-style: solid;
+  width: 80%;
+  align-items: center;
+  margin: 60px auto;
+}
+
+.questionbox {
+  border-style: solid;
+  align-items: center;
+  margin: auto;
+  width: 65%;
+  height: 65%;
+  background-color: aliceblue;
+}
+
+.highscore {
+  border-style: solid;
+  align-items: center;
+  margin: auto;
+  width: 20%;
+  background-color: aliceblue;
+  margin-top: 100px;
+  text-align-last: center;
+}
+
+audio {
+  position: fixed;
+  bottom: 0;
+}
