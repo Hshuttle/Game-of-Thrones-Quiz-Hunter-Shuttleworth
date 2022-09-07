@@ -26,17 +26,38 @@ h1 {
   width: 65%;
   height: 65%;
   background-color: aliceblue;
+  padding-left: 10px;
 }
 
-.highscore {
+button {
   border-style: solid;
+  display: flex;
   align-items: center;
   margin: auto;
-  width: 20%;
   background-color: aliceblue;
-  margin-top: 100px;
-  text-align-last: center;
+  margin-top: 75px;
+  text-align: center;
 }
+
+/* .startBtn {
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: aliceblue;
+  margin-top: 75px;
+  text-align: center;
+}
+
+.highscoreBtn {
+  border-style: solid;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  background-color: aliceblue;
+  margin-top: 75px;
+  text-align: center;
+} */
 
 audio {
   position: fixed;
