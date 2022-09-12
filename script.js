@@ -1,10 +1,10 @@
 // Setting all my variables
 var startBtn = document.querySelector(".startBtn");
 var highscoreBtn = document.querySelector(".highscoreBtn");
-var questionbox = document.querySelector(".questionbox");
-var questionsample = document.querySelector(".questionsample");
+var questionBox = document.querySelector(".questionbox");
+var questionSample = document.querySelector(".questionsample");
 var timeLeft = 60;
-i = 0;
+var questionIndex = 0;
 
 var questions = [
   {
@@ -54,12 +54,27 @@ timeEl = document.querySelector(".timer");
 startBtn.addEventListener("click", startQuiz);
 
 function startQuiz() {
-  var question1 = questions[i];
-  var title = question1.question;
-  var choices = question1.answers;
-  questionsample.textContent = title;
-  i++;
+  renderQ();
   timer();
+}
+
+function renderQ() {
+  questionSample.textContent = questions[questionIndex].question;
+  for (i = 0; i < questions[questionIndex].answers.length; i++) {
+    var ansChoice = document.createElement("button");
+    ansChoice.textContent = questions[questionIndex].answers[i];
+    ansChoice.addEventListener("click", function () {
+      if (this.textContent === questions[questionIndex].rightAns) {
+        console.log("You got it right!");
+      } else {
+        console.log("SHAME!");
+      }
+      questionIndex++;
+      questionBox.innerHTML = "";
+      renderQ();
+    });
+    questionBox.appendChild(ansChoice);
+  }
 }
 
 function timer() {
